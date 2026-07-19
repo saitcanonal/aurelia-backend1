@@ -36,10 +36,10 @@
 <div id="loginBox">
   <h2>AURELİA — Yönetici Girişi</h2>
   <label for="adminKey">Admin Anahtarı</label>
-  <input id="adminKey" type="password" placeholder="Sunucudaki ADMIN_KEY değeri" style="width:100%;">
+  <input id="adminKey" type="password" placeholder="aurelia-99" style="width:100%;">
   <div style="margin-top:6px; font-size:.78rem; color:var(--stone);">Ayrıca backend adresini de girin:</div>
   <label for="apiBase" style="margin-top:10px;">Backend Adresi</label>
-  <input id="apiBase" type="text" placeholder="https://sizin-backend-adresiniz.onrender.com" style="width:100%;">
+  <input id="apiBase" type="text" placeholder="https://aurelia-backend1.onrender.com" style="width:100%;">
   <button style="margin-top:16px; width:100%;" onclick="login()">Giriş Yap</button>
   <div id="msg"></div>
 </div>
@@ -88,7 +88,7 @@
   }
 
   function logout(){
-    ADMIN_KEY = ''; API_BASE = '';
+    ADMIN_KEY = ''; API_BASE = 'https://aurelia-backend1.onrender.com';
     document.getElementById('panel').style.display = 'none';
     document.getElementById('loginBox').style.display = 'block';
     document.getElementById('msg').textContent = '';
