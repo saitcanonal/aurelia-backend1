@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AURELİA — Zamanın Ötesinde Zarafet</title>
+<meta name="description" content="AURELİA Kuyumcu — altın, pırlanta ve özel tasarım mücevher koleksiyonları. El işçiliği, sertifikalı kalite ve 30 yıllık güven.">
+<meta name="theme-color" content="#0F0F0F">
+<meta property="og:title" content="AURELİA — Zamanın Ötesinde Zarafet">
+<meta property="og:description" content="Altın, pırlanta ve özel tasarım mücevher koleksiyonları.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "JewelryStore",
+  "name": "AURELİA",
+  "description": "Premium kuyumcu markası — altın, pırlanta ve özel tasarım mücevher koleksiyonları.",
+  "telephone": "+90 212 000 00 00",
+  "address": {"@type":"PostalAddress","addressLocality":"İstanbul","addressCountry":"TR"}
+}
+</script>
+<style>
+  :root{
+    --ink:#0F0F0F;
+    --ink-2:#161616;
+    --panel:#1A1A1A;
+    --white:#FFFFFF;
+    --gold:#D4AF37;
+    --gold-light:#E9CE7A;
+    --gold-dim:#8A7434;
+    --stone:#8F8A80;
+    --hairline:rgba(212,175,55,0.18);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ink);
+    color:var(--white);
+    font-family:'Jost', sans-serif;
+    font-weight:300;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4,.serif{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:400;
+    letter-spacing:0.01em;
+  }
+  .eyebrow{
+    font-family:'Jost',sans-serif;
+    font-size:0.72rem;
+    letter-spacing:0.35em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:500;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  ::selection{background:var(--gold); color:var(--ink);}
+  .container{max-width:1240px; margin:0 auto; padding:0 28px;}
+  @media(min-width:768px){.container{padding:0 56px;}}
+
+  /* thread — signature element: a gold wire that runs the length of the page,
+     evoking a drawn strand of gold wire being shaped into jewelry */
+  #thread{
+    position:fixed; left:0; top:0; width:3px; height:100%;
+    z-index:60; pointer-events:none;
+  }
+  #thread svg{width:100%; height:100%;}
+  #thread path{
+    fill:none; stroke:var(--gold); stroke-width:1.4;
+    stroke-dasharray:1; stroke-dashoffset:1;
+    vector-effect:non-scaling-stroke;
+  }
+
+  .scroll-bar{position:fixed; top:0; left:0; height:2px; background:var(--gold); z-index:100; width:0%;}
+
+  /* nav */
+  header{
+    position:fixed; top:0; left:0; width:100%; z-index:90;
+    padding:22px 0; transition:all .5s ease;
+    background:linear-gradient(to bottom, rgba(15,15,15,0.9), transparent);
+  }
+  header.scrolled{
+    padding:14px 0; background:rgba(15,15,15,0.86); backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--hairline);
+  }
+  nav{display:flex; align-items:center; justify-content:space-between;}
+  .logo{
+    font-family:'Cormorant Garamond', serif; font-size:1.7rem; letter-spacing:0.14em;
+  }
+  .logo span{color:var(--gold);}
+  .nav-links{display:none; gap:38px; font-size:0.86rem; letter-spacing:0.04em;}
+  @media(min-width:1024px){.nav-links{display:flex;}}
+  .nav-links a{position:relative; padding-bottom:4px; opacity:0.88; transition:opacity .3s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-links a::after{
+    content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--gold);
+    transition:width .35s ease;
+  }
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{
+    display:none; border:1px solid var(--gold); color:var(--gold); padding:10px 26px;
+    font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; transition:all .35s;
+  }
+  @media(min-width:1024px){.nav-cta{display:inline-block;}}
+  .nav-cta:hover{background:var(--gold); color:var(--ink);}
+  .burger{display:flex; flex-direction:column; gap:6px; cursor:pointer; z-index:95;}
+  @media(min-width:1024px){.burger{display:none;}}
+  .burger span{width:26px; height:1px; background:var(--white); transition:all .3s;}
+  .mobile-menu{
+    position:fixed; inset:0; background:var(--ink); z-index:80;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:34px;
+    transform:translateY(-100%); transition:transform .5s cubic-bezier(.77,0,.18,1);
+  }
+  .mobile-menu.open{transform:translateY(0);}
+  .mobile-menu a{font-family:'Cormorant Garamond',serif; font-size:1.9rem;}
+
+  /* buttons */
+  .btn{
+    display:inline-flex; align-items:center; gap:10px; padding:15px 34px;
+    font-size:0.8rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:500;
+    transition:all .4s cubic-bezier(.2,.8,.2,1); cursor:pointer; border:1px solid transparent;
+  }
+  .btn-gold{background:var(--gold); color:var(--ink);}
+  .btn-gold:hover{background:var(--gold-light); transform:translateY(-2px);}
+  .btn-outline{border-color:rgba(255,255,255,0.35); color:var(--white);}
+  .btn-outline:hover{border-color:var(--gold); color:var(--gold); transform:translateY(-2px);}
+
+  /* hero */
+  .hero{
+    position:relative; min-height:100svh; display:flex; align-items:flex-end;
+    background:linear-gradient(180deg, rgba(15,15,15,0.35) 0%, rgba(15,15,15,0.55) 55%, var(--ink) 100%),
+    url('https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=1800&auto=format&fit=crop') center/cover no-repeat fixed;
+  }
+  .hero-inner{padding-bottom:100px; width:100%;}
+  .hero .eyebrow{margin-bottom:18px; display:block;}
+  .hero h1{
+    font-size:clamp(2.6rem, 7vw, 5.4rem); line-height:1.04; max-width:16ch;
+    font-weight:300;
+  }
+  .hero h1 em{font-style:italic; color:var(--gold);}
+  .hero p{
+    margin-top:26px; max-width:44ch; color:rgba(255,255,255,0.72); font-size:1.05rem; line-height:1.7;
+  }
+  .hero-actions{margin-top:42px; display:flex; flex-wrap:wrap; gap:18px;}
+  .hero-scroll{
+    position:absolute; right:56px; bottom:46px; writing-mode:vertical-rl; letter-spacing:0.3em;
+    font-size:0.72rem; text-transform:uppercase; color:rgba(255,255,255,0.5); display:none;
+    align-items:center; gap:14px;
+  }
+  @media(min-width:768px){.hero-scroll{display:flex;}}
+  .hero-scroll .line{width:1px; height:60px; background:linear-gradient(to bottom, var(--gold), transparent);}
+
+  section{position:relative;}
+  .section-pad{padding:120px 0;}
+  @media(max-width:768px){.section-pad{padding:80px 0;}}
+  .divider{width:64px; height:1px; background:var(--gold); margin:22px 0 0;}
+
+  /* reveal */
+  .reveal{opacity:0; transform:translateY(36px); transition:opacity 1s ease, transform 1s cubic-bezier(.2,.8,.2,1);}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* about */
+  .about-grid{display:grid; grid-template-columns:1fr; gap:60px; align-items:center;}
+  @media(min-width:960px){.about-grid{grid-template-columns:1fr 1fr; gap:90px;}}
+  .about-img-wrap{position:relative;}
+  .about-img-wrap img{border-radius:2px;}
+  .about-frame{
+    position:absolute; top:24px; left:24px; right:-24px; bottom:-24px;
+    border:1px solid var(--gold); z-index:-1;
+  }
+  .stat-row{display:flex; gap:50px; margin-top:44px; flex-wrap:wrap;}
+  .stat-num{font-family:'Cormorant Garamond',serif; font-size:2.6rem; color:var(--gold);}
+  .stat-label{font-size:0.78rem; color:var(--stone); letter-spacing:0.05em; margin-top:4px;}
+  .about-text p{color:rgba(255,255,255,0.72); line-height:1.85; margin-top:20px; font-size:1.02rem;}
+
+  /* values */
+  .value-grid{display:grid; grid-template-columns:1fr; gap:1px; background:var(--hairline); margin-top:60px;}
+  @media(min-width:700px){.value-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:1100px){.value-grid{grid-template-columns:repeat(4,1fr);}}
+  .value-card{
+    background:var(--ink); padding:44px 34px; transition:background .4s ease;
+  }
+  .value-card:hover{background:var(--panel);}
+  .value-icon{color:var(--gold); margin-bottom:22px;}
+  .value-card h3{font-size:1.3rem; margin-bottom:10px; font-weight:400;}
+  .value-card p{color:var(--stone); font-size:0.92rem; line-height:1.6;}
+
+  /* collections */
+  .bg-panel{background:var(--ink-2);}
+  .coll-grid{display:grid; grid-template-columns:1fr; gap:26px; margin-top:60px;}
+  @media(min-width:640px){.coll-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:1024px){.coll-grid{grid-template-columns:repeat(4,1fr);}}
+  .coll-card{
+    position:relative; aspect-ratio:3/4; overflow:hidden; border-radius:2px; cursor:pointer;
+  }
+  .coll-card img{width:100%; height:100%; object-fit:cover; transition:transform .8s cubic-bezier(.2,.8,.2,1);}
+  .coll-card:hover img{transform:scale(1.09);}
+  .coll-overlay{
+    position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.05) 55%);
+    display:flex; flex-direction:column; justify-content:flex-end; padding:26px;
+  }
+  .coll-overlay h3{font-size:1.5rem; font-weight:400;}
+  .coll-overlay span{
+    font-size:0.72rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold);
+    opacity:0; transform:translateY(8px); transition:all .4s ease; margin-top:8px; display:inline-block;
+  }
+  .coll-card:hover .coll-overlay span{opacity:1; transform:translateY(0);}
+
+  /* featured products slider */
+  .slider-track{display:flex; gap:26px; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:20px;
+    scrollbar-width:none;}
+  .slider-track::-webkit-scrollbar{display:none;}
+  .prod-card{
+    min-width:280px; scroll-snap-align:start; background:var(--panel); border:1px solid var(--hairline);
+    transition:border-color .4s ease;
+  }
+  .prod-card:hover{border-color:var(--gold);}
+  .prod-img{aspect-ratio:1/1; overflow:hidden;}
+  .prod-img img{width:100%; height:100%; object-fit:cover; transition:transform .7s ease;}
+  .prod-card:hover .prod-img img{transform:scale(1.06);}
+  .prod-body{padding:22px 24px 26px;}
+  .prod-body h4{font-size:1.25rem; font-weight:400;}
+  .prod-body p{color:var(--stone); font-size:0.88rem; margin-top:8px; line-height:1.55;}
+  .prod-link{display:inline-flex; align-items:center; gap:8px; margin-top:16px; font-size:0.76rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);}
+  .slider-nav{display:flex; gap:14px; margin-top:32px;}
+  .slider-nav button{
+    width:44px; height:44px; border:1px solid rgba(255,255,255,0.25); background:transparent; color:var(--white);
+    display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all .3s;
+  }
+  .slider-nav button:hover{border-color:var(--gold); color:var(--gold);}
+
+  /* process timeline */
+  .timeline{position:relative; margin-top:80px;}
+  .timeline-line{
+    position:absolute; left:19px; top:0; bottom:0; width:1px; background:var(--hairline);
+  }
+  @media(min-width:900px){
+    .timeline-line{left:50%; transform:translateX(-50%);}
+  }
+  .t-item{position:relative; display:grid; grid-template-columns:44px 1fr; gap:26px; margin-bottom:64px;}
+  @media(min-width:900px){
+    .t-item{grid-template-columns:1fr 44px 1fr; gap:0; align-items:center;}
+    .t-item .t-content{padding:0 50px;}
+    .t-item:nth-child(even) .t-content-a{order:3;}
+    .t-item:nth-child(even) .t-content-b{order:1; text-align:right;}
+    .t-item .t-content-a{grid-column:3;}
+    .t-item .t-content-b{grid-column:1;}
+  }
+  .t-dot{
+    width:44px; height:44px; border:1px solid var(--gold); border-radius:50%; display:flex; align-items:center;
+    justify-content:center; font-family:'Cormorant Garamond',serif; color:var(--gold); font-size:1.1rem; background:var(--ink);
+    z-index:2; grid-column:1;
+  }
+  @media(min-width:900px){.t-dot{grid-column:2;}}
+  .t-content h4{font-size:1.5rem; font-weight:400;}
+  .t-content p{color:var(--stone); margin-top:8px; font-size:0.92rem; line-height:1.6; max-width:36ch;}
+
+  /* why us */
+  .why-grid{display:grid; grid-template-columns:1fr; gap:44px; margin-top:60px;}
+  @media(min-width:700px){.why-grid{grid-template-columns:repeat(2,1fr); gap:52px 60px;}}
+  @media(min-width:1100px){.why-grid{grid-template-columns:repeat(3,1fr);}}
+  .why-item{display:flex; gap:20px;}
+  .why-num{font-family:'Cormorant Garamond',serif; font-size:1.5rem; color:var(--gold); min-width:38px;}
+  .why-item h4{font-size:1.15rem; font-weight:500; margin-bottom:6px;}
+  .why-item p{color:var(--stone); font-size:0.88rem; line-height:1.6;}
+
+  /* testimonials */
+  .testi-track{display:flex; gap:26px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; padding-bottom:10px;}
+  .testi-track::-webkit-scrollbar{display:none;}
+  .testi-card{
+    min-width:320px; max-width:360px; scroll-snap-align:start; background:var(--panel); padding:36px 32px;
+    border:1px solid var(--hairline);
+  }
+  .stars{color:var(--gold); letter-spacing:3px; font-size:0.95rem;}
+  .testi-card p{margin-top:18px; color:rgba(255,255,255,0.78); font-size:0.95rem; line-height:1.7; font-style:italic;}
+  .testi-person{display:flex; align-items:center; gap:14px; margin-top:24px;}
+  .testi-person img{width:44px; height:44px; border-radius:50%; object-fit:cover;}
+  .testi-person div h5{font-size:0.92rem; font-weight:500;}
+  .testi-person div span{font-size:0.78rem; color:var(--stone);}
+
+  /* gallery */
+  .gallery-grid{columns:2; gap:16px; margin-top:60px;}
+  @media(min-width:768px){.gallery-grid{columns:3;}}
+  .gallery-grid img{width:100%; margin-bottom:16px; border-radius:2px; cursor:pointer; transition:opacity .3s;}
+  .gallery-grid img:hover{opacity:0.85;}
+
+  /* instagram */
+  .insta-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:4px; margin-top:50px;}
+  @media(min-width:768px){.insta-grid{grid-template-columns:repeat(6,1fr);}}
+  .insta-item{position:relative; aspect-ratio:1/1; overflow:hidden;}
+  .insta-item img{width:100%; height:100%; object-fit:cover; transition:transform .5s;}
+  .insta-item:hover img{transform:scale(1.1);}
+
+  /* faq */
+  .faq-item{border-bottom:1px solid var(--hairline);}
+  .faq-q{
+    display:flex; align-items:center; justify-content:space-between; padding:26px 0; cursor:pointer;
+    font-family:'Cormorant Garamond',serif; font-size:1.25rem;
+  }
+  .faq-icon{color:var(--gold); font-size:1.4rem; transition:transform .35s ease; font-family:'Jost',sans-serif; font-weight:300;}
+  .faq-item.open .faq-icon{transform:rotate(45deg);}
+  .faq-a{max-height:0; overflow:hidden; transition:max-height .45s ease;}
+  .faq-a p{color:var(--stone); padding-bottom:24px; line-height:1.7; font-size:0.94rem; max-width:70ch;}
+
+  /* contact */
+  .contact-grid{display:grid; grid-template-columns:1fr; gap:60px; margin-top:60px;}
+  @media(min-width:960px){.contact-grid{grid-template-columns:0.85fr 1.15fr;}}
+  .info-row{display:flex; gap:18px; padding:22px 0; border-bottom:1px solid var(--hairline);}
+  .info-row:first-child{padding-top:0;}
+  .info-icon{color:var(--gold);}
+  .info-row h5{font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--stone);}
+  .info-row p{margin-top:4px; font-size:1.02rem;}
+  .field{margin-bottom:22px;}
+  .field label{display:block; font-size:0.76rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--stone); margin-bottom:9px;}
+  .field input, .field textarea{
+    width:100%; background:transparent; border:none; border-bottom:1px solid rgba(255,255,255,0.25);
+    padding:10px 2px; color:var(--white); font-family:'Jost',sans-serif; font-size:1rem; transition:border-color .3s;
+  }
+  .field input:focus, .field textarea:focus{outline:none; border-color:var(--gold);}
+  .field.error input, .field.error textarea{border-color:#c0524b;}
+  .field .err-msg{display:none; color:#c0524b; font-size:0.76rem; margin-top:6px;}
+  .field.error .err-msg{display:block;}
+  .map-frame{margin-top:60px; border:1px solid var(--hairline); filter:grayscale(1) invert(0.92) contrast(0.9);}
+
+  footer{border-top:1px solid var(--hairline); padding:70px 0 30px;}
+  .foot-grid{display:grid; grid-template-columns:1fr; gap:44px;}
+  @media(min-width:800px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr 1fr;}}
+  .foot-grid h5{font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:18px;}
+  .foot-grid ul{list-style:none;}
+  .foot-grid li{margin-bottom:11px;}
+  .foot-grid a{color:var(--stone); font-size:0.92rem; transition:color .3s;}
+  .foot-grid a:hover{color:var(--gold);}
+  .foot-bottom{
+    display:flex; flex-direction:column; gap:16px; margin-top:60px; padding-top:26px; border-top:1px solid var(--hairline);
+    font-size:0.8rem; color:var(--stone);
+  }
+  @media(min-width:700px){.foot-bottom{flex-direction:row; justify-content:space-between; align-items:center;}}
+  .social-row{display:flex; gap:16px;}
+  .social-row a{
+    width:38px; height:38px; border:1px solid rgba(255,255,255,0.2); border-radius:50%; display:flex;
+    align-items:center; justify-content:center; transition:all .3s;
+  }
+  .social-row a:hover{border-color:var(--gold); color:var(--gold);}
+
+  /* floating buttons */
+  .float-wrap{position:fixed; right:22px; bottom:22px; z-index:70; display:flex; flex-direction:column; gap:14px; align-items:flex-end;}
+  .float-btn{
+    width:54px; height:54px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    cursor:pointer; box-shadow:0 8px 24px rgba(0,0,0,0.4); transition:transform .3s;
+  }
+  .float-btn:hover{transform:translateY(-3px);}
+  .whatsapp-btn{background:#25D366; color:#fff;}
+  .call-btn{background:var(--gold); color:var(--ink); display:flex;}
+  @media(min-width:768px){.call-btn{display:none;}}
+  .top-btn{background:var(--panel); border:1px solid var(--hairline); color:var(--gold); opacity:0; pointer-events:none; transition:all .3s;}
+  .top-btn.show{opacity:1; pointer-events:auto;}
+
+  /* lightbox */
+  .lightbox{
+    position:fixed; inset:0; background:rgba(0,0,0,0.94); z-index:200; display:none; align-items:center;
+    justify-content:center; padding:30px;
+  }
+  .lightbox.open{display:flex;}
+  .lightbox img{max-height:88vh; max-width:90vw; border:1px solid var(--hairline);}
+  .lightbox-close{position:absolute; top:26px; right:30px; color:var(--white); font-size:2rem; cursor:pointer;}
+
+  /* cookie */
+  .cookie{
+    position:fixed; left:20px; right:20px; bottom:20px; max-width:520px; background:var(--panel);
+    border:1px solid var(--hairline); padding:22px 24px; z-index:150; transform:translateY(140%); transition:transform .6s cubic-bezier(.2,.8,.2,1);
+  }
+  .cookie.show{transform:translateY(0);}
+  .cookie p{font-size:0.86rem; color:var(--stone); line-height:1.55;}
+  .cookie-actions{display:flex; gap:14px; margin-top:16px;}
+  .cookie-actions button{
+    font-size:0.76rem; letter-spacing:0.08em; text-transform:uppercase; padding:9px 18px; cursor:pointer; border:1px solid rgba(255,255,255,0.25); background:transparent; color:var(--white);
+  }
+  .cookie-actions .accept{background:var(--gold); color:var(--ink); border-color:var(--gold);}
+
+  .loader{
+    position:fixed; inset:0; background:var(--ink); z-index:300; display:flex; align-items:center; justify-content:center;
+    transition:opacity .6s ease, visibility .6s ease;
+  }
+  .loader.hide{opacity:0; visibility:hidden;}
+  .loader-mark{font-family:'Cormorant Garamond',serif; font-size:2rem; letter-spacing:0.3em; color:var(--gold); position:relative;}
+  .loader-mark::after{
+    content:''; position:absolute; left:0; bottom:-10px; width:100%; height:1px; background:var(--gold);
+    transform:scaleX(0); transform-origin:left; animation:loadline 1.3s ease forwards;
+  }
+  @keyframes loadline{to{transform:scaleX(1);}}
+
+  /* booking modal */
+  .booking-overlay{
+    position:fixed; inset:0; background:rgba(6,6,6,0.82); backdrop-filter:blur(6px); z-index:250;
+    display:none; align-items:center; justify-content:center; padding:20px;
+  }
+  .booking-overlay.open{display:flex;}
+  .booking-modal{
+    background:var(--panel); border:1px solid var(--hairline); max-width:920px; width:100%;
+    max-height:92vh; overflow-y:auto; position:relative; box-shadow:0 30px 80px rgba(0,0,0,0.6);
+  }
+  .booking-head{
+    display:flex; align-items:center; justify-content:space-between; padding:26px 30px;
+    border-bottom:1px solid var(--hairline); position:sticky; top:0; background:var(--panel); z-index:2;
+  }
+  .booking-head h3{font-size:1.6rem; font-weight:400;}
+  .booking-head span{display:block; margin-top:4px; font-size:0.8rem; color:var(--stone);}
+  .booking-close{
+    width:38px; height:38px; border:1px solid rgba(255,255,255,0.2); border-radius:50%; display:flex;
+    align-items:center; justify-content:center; cursor:pointer; font-size:1.3rem; color:var(--white); flex-shrink:0; transition:all .3s;
+  }
+  .booking-close:hover{border-color:var(--gold); color:var(--gold);}
+  .booking-body{padding:30px; display:grid; grid-template-columns:1fr; gap:36px;}
+  @media(min-width:840px){.booking-body{grid-template-columns:1fr 1fr;}}
+
+  .cal-nav{display:flex; align-items:center; justify-content:space-between; margin-bottom:20px;}
+  .cal-nav h4{font-family:'Cormorant Garamond',serif; font-size:1.3rem; text-transform:capitalize;}
+  .cal-nav-btns{display:flex; gap:8px;}
+  .cal-nav-btns button{
+    width:34px; height:34px; border:1px solid rgba(255,255,255,0.2); background:transparent; color:var(--white);
+    cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all .3s;
+  }
+  .cal-nav-btns button:hover:not(:disabled){border-color:var(--gold); color:var(--gold);}
+  .cal-nav-btns button:disabled{opacity:0.25; cursor:not-allowed;}
+  .cal-weekdays{display:grid; grid-template-columns:repeat(7,1fr); gap:4px; margin-bottom:6px;}
+  .cal-weekdays span{text-align:center; font-size:0.68rem; letter-spacing:0.05em; text-transform:uppercase; color:var(--stone);}
+  .cal-grid{display:grid; grid-template-columns:repeat(7,1fr); gap:4px;}
+  .cal-day{
+    aspect-ratio:1/1; display:flex; align-items:center; justify-content:center; font-size:0.88rem;
+    cursor:pointer; background:rgba(255,255,255,0.03); border:1px solid transparent; transition:all .25s; color:var(--white);
+  }
+  .cal-day.empty{background:transparent; cursor:default;}
+  .cal-day.disabled{color:rgba(255,255,255,0.2); cursor:not-allowed; background:transparent;}
+  .cal-day.today{border-color:rgba(212,175,55,0.4);}
+  .cal-day:not(.disabled):not(.empty):hover{border-color:var(--gold); color:var(--gold);}
+  .cal-day.selected{background:var(--gold); color:var(--ink); font-weight:500;}
+  .cal-legend{display:flex; gap:18px; margin-top:16px; font-size:0.74rem; color:var(--stone);}
+  .cal-legend-dot{display:inline-block; width:9px; height:9px; margin-right:6px; vertical-align:middle;}
+
+  .slot-label{font-size:0.76rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--stone); margin-bottom:14px;}
+  .slot-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:26px;}
+  .slot-btn{
+    padding:11px 6px; border:1px solid rgba(255,255,255,0.2); background:transparent; color:var(--white);
+    font-family:'Jost',sans-serif; font-size:0.86rem; cursor:pointer; transition:all .25s;
+  }
+  .slot-btn:hover:not(:disabled){border-color:var(--gold); color:var(--gold);}
+  .slot-btn.selected{background:var(--gold); border-color:var(--gold); color:var(--ink); font-weight:500;}
+  .slot-btn:disabled{opacity:0.28; text-decoration:line-through; cursor:not-allowed;}
+  .slot-empty{color:var(--stone); font-size:0.88rem; grid-column:1/-1; padding:14px 0;}
+
+  .booking-form-title{font-size:0.76rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--stone); margin-bottom:16px;}
+  .booking-summary{
+    display:none; align-items:center; gap:12px; background:rgba(212,175,55,0.08); border:1px solid var(--hairline);
+    padding:14px 16px; margin-bottom:22px; font-size:0.86rem;
+  }
+  .booking-summary.show{display:flex;}
+  .booking-summary strong{color:var(--gold); font-weight:500;}
+  .booking-success{text-align:center; padding:40px 10px;}
+  .booking-success svg{color:var(--gold); margin-bottom:18px;}
+  .booking-success h3{font-size:1.8rem; font-weight:400;}
+  .booking-success p{color:var(--stone); margin-top:12px; line-height:1.7;}
+  .booking-success .summary-box{
+    margin:24px auto 0; max-width:360px; border:1px solid var(--hairline); padding:18px 22px; text-align:left; font-size:0.92rem;
+  }
+  .booking-success .summary-box div{display:flex; justify-content:space-between; padding:6px 0; color:var(--stone);}
+  .booking-success .summary-box div b{color:var(--white); font-weight:400;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
+  }
+  :focus-visible{outline:2px solid var(--gold); outline-offset:3px;}
+</style>
+</head>
+<body>
+
+<div class="loader" id="loader"><div class="loader-mark">AURELİA</div></div>
+
+<div id="thread"><svg viewBox="0 0 4 100" preserveAspectRatio="none"><path id="threadPath" d="M2,0 L2,100"/></svg></div>
+<div class="scroll-bar" id="scrollBar"></div>
+
+<!-- NAV -->
+<header id="siteHeader">
+  <div class="container">
+    <nav>
+      <a href="#top" class="logo">AUR<span>E</span>LİA</a>
+      <div class="nav-links">
+        <a href="#hakkimizda">Hakkımızda</a>
+        <a href="#koleksiyonlar">Koleksiyonlar</a>
+        <a href="#surec">Üretim Süreci</a>
+        <a href="#yorumlar">Yorumlar</a>
+        <a href="#sss">SSS</a>
+        <a href="#iletisim">İletişim</a>
+      </div>
+      <button type="button" class="nav-cta" id="openBookingNav">Randevu Al</button>
+      <div class="burger" id="burger" aria-label="Menü" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#hakkimizda">Hakkımızda</a>
+  <a href="#koleksiyonlar">Koleksiyonlar</a>
+  <a href="#surec">Üretim Süreci</a>
+  <a href="#yorumlar">Yorumlar</a>
+  <a href="#sss">SSS</a>
+  <a href="#iletisim">İletişim</a>
+  <button type="button" class="btn btn-gold" id="openBookingMobile" style="border:none; margin-top:6px;">Randevu Al</button>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <span class="eyebrow reveal in">1991'den Beri El İşçiliği</span>
+      <h1 class="reveal in">Zarafetin <em>En Değerli</em> Hali</h1>
+      <p class="reveal in">Altın, pırlanta ve özel tasarım mücevher koleksiyonlarımızla kaliteyi ve şıklığı bir araya getiriyoruz. Her parça, ustalarımızın elinde bir hikâyeye dönüşür.</p>
+      <div class="hero-actions reveal in">
+        <a href="#koleksiyonlar" class="btn btn-gold">Koleksiyonları İncele</a>
+        <button type="button" class="btn btn-outline" id="openBookingHero">Randevu Al</button>
+      </div>
+    </div>
+    <div class="hero-scroll"><span>Kaydır</span><span class="line"></span></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="hakkimizda" class="section-pad">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap reveal">
+          <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1200&auto=format&fit=crop" alt="AURELİA atölyesinde el işçiliği">
+          <div class="about-frame"></div>
+        </div>
+        <div class="about-text reveal">
+          <span class="eyebrow">Hakkımızda</span>
+          <h2 style="font-size:clamp(1.9rem,3.4vw,2.8rem); margin-top:16px;">Üç Kuşaktır Süren Bir Zanaat</h2>
+          <div class="divider"></div>
+          <p>1991 yılında küçük bir atölyede başlayan yolculuğumuz, bugün İstanbul'un saygın kuyumcu markalarından biri haline geldi. Kurucumuzun altına ve zanaata duyduğu tutku, her bir parçada yaşamaya devam ediyor.</p>
+          <p>Ustalarımız, geleneksel el işçiliği tekniklerini modern tasarım anlayışıyla harmanlayarak; sadece takı değil, nesilden nesile aktarılacak değerler üretiyor. Her ürün, atölyemizden çıkmadan önce titizlikle kontrol ediliyor ve sertifikalandırılıyor.</p>
+          <div class="stat-row">
+            <div><div class="stat-num">30+</div><div class="stat-label">Yıllık Tecrübe</div></div>
+            <div><div class="stat-num">12K+</div><div class="stat-label">Mutlu Müşteri</div></div>
+            <div><div class="stat-num">100%</div><div class="stat-label">Sertifikalı Ürün</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="section-pad bg-panel">
+    <div class="container">
+      <div class="reveal" style="max-width:640px;">
+        <span class="eyebrow">Değerlerimiz</span>
+        <h2 style="font-size:clamp(1.9rem,3.4vw,2.6rem); margin-top:16px;">Her Detayda Prensip</h2>
+      </div>
+      <div class="value-grid">
+        <div class="value-card reveal">
+          <svg class="value-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg>
+          <h3>Güvenilir Hizmet</h3>
+          <p>Şeffaf süreçler ve dürüst danışmanlıkla her müşterimizle uzun soluklu bir güven ilişkisi kuruyoruz.</p>
+        </div>
+        <div class="value-card reveal">
+          <svg class="value-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M9 12l2 2 4-4M7.8 2.8a2 2 0 0 1 2-.3l1.5.6a2 2 0 0 0 1.4 0l1.5-.6a2 2 0 0 1 2 .3l1.1 1.1a2 2 0 0 1 .3 2l-.6 1.5a2 2 0 0 0 0 1.4l.6 1.5a2 2 0 0 1-.3 2l-1.1 1.1a2 2 0 0 1-2 .3l-1.5-.6a2 2 0 0 0-1.4 0l-1.5.6a2 2 0 0 1-2-.3l-1.1-1.1a2 2 0 0 1-.3-2l.6-1.5a2 2 0 0 0 0-1.4l-.6-1.5a2 2 0 0 1 .3-2z"/></svg>
+          <h3>Sertifikalı Ürünler</h3>
+          <p>Tüm pırlanta ve değerli taşlarımız uluslararası kabul görmüş sertifikalarla teslim edilir.</p>
+        </div>
+        <div class="value-card reveal">
+          <svg class="value-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <h3>El İşçiliği</h3>
+          <p>Her parça, deneyimli ustalarımızın elinde saatler süren özenli bir emekle şekillendirilir.</p>
+        </div>
+        <div class="value-card reveal">
+          <svg class="value-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3v18M3 12h18M6 6l12 12M18 6L6 18"/></svg>
+          <h3>Modern Tasarımlar</h3>
+          <p>Klasik zarafeti çağdaş çizgilerle buluşturan koleksiyonlarla zamanın ötesinde bir stil sunuyoruz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTIONS -->
+  <section id="koleksiyonlar" class="section-pad">
+    <div class="container">
+      <div class="reveal" style="max-width:640px;">
+        <span class="eyebrow">Koleksiyonlar</span>
+        <h2 style="font-size:clamp(1.9rem,3.4vw,2.6rem); margin-top:16px;">Zevkinize Uygun Bir Dünya</h2>
+      </div>
+      <div class="coll-grid">
+        <div class="coll-card reveal">
+          <img src="https://images.unsplash.com/photo-1620656798579-1984d9e87df7?q=80&w=800&auto=format&fit=crop" alt="Altın Takılar">
+          <div class="coll-overlay"><h3>Altın Takılar</h3><span>Koleksiyonu Gör →</span></div>
+        </div>
+        <div class="coll-card reveal">
+          <img src="https://images.unsplash.com/photo-1600721391689-2564bb8055de?q=80&w=800&auto=format&fit=crop" alt="Pırlanta">
+          <div class="coll-overlay"><h3>Pırlanta</h3><span>Koleksiyonu Gör →</span></div>
+        </div>
+        <div class="coll-card reveal">
+          <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=800&auto=format&fit=crop" alt="Bilezik">
+          <div class="coll-overlay"><h3>Bilezik</h3><span>Koleksiyonu Gör →</span></div>
+        </div>
+        <div class="coll-card reveal">
+          <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=800&auto=format&fit=crop" alt="Yüzük">
+          <div class="coll-overlay"><h3>Yüzük</h3><span>Koleksiyonu Gör →</span></div>
+        </div>
+        <div class="coll-card reveal">
+          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=800&auto=format&fit=crop" alt="Kolye">
+          <div class="coll-overlay"><h3>Kolye</h3><span>Koleksiyonu Gör →</span></div>
+        </div>
+        <div class="coll-card reveal">
+          <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=800&auto=format&fit=crop" alt="Küpe">
+          <div class="coll-overlay"><h3>Küpe</h3><span>Koleksiyonu Gör →</span></div>
+        </div>
+        <div class="coll-card reveal">
+          <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=800&auto=format&fit=crop" alt="Saat">
+          <div class="coll-overlay"><h3>Saat</h3><span>Koleksiyonu Gör →</span></div>
+        </div>
+        <div class="coll-card reveal">
+          <img src="https://images.unsplash.com/photo-1544376798-89aa6b82c6cc?q=80&w=800&auto=format&fit=crop" alt="Özel Tasarım">
+          <div class="coll-overlay"><h3>Özel Tasarım</h3><span>Koleksiyonu Gör →</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="section-pad bg-panel">
+    <div class="container">
+      <div class="reveal" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px;">
+        <div>
+          <span class="eyebrow">Öne Çıkan Ürünler</span>
+          <h2 style="font-size:clamp(1.9rem,3.4vw,2.6rem); margin-top:16px;">Bu Sezonun Seçkileri</h2>
+        </div>
+      </div>
+      <div class="slider-track reveal" id="prodSlider">
+        <div class="prod-card">
+          <div class="prod-img"><img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=600&auto=format&fit=crop" alt="Zarif Altın Bilezik"></div>
+          <div class="prod-body">
+            <h4>Zarif Altın Bilezik</h4>
+            <p>El işçiliği detaylarla süslenmiş, 22 ayar altından üretilmiş şık bilezik.</p>
+            <span class="prod-link">Detayları Gör →</span>
+          </div>
+        </div>
+        <div class="prod-card">
+          <div class="prod-img"><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=600&auto=format&fit=crop" alt="Pırlanta Solitaire Yüzük"></div>
+          <div class="prod-body">
+            <h4>Solitaire Pırlanta Yüzük</h4>
+            <p>Klasik zarafeti temsil eden, sertifikalı tek taş pırlanta yüzük.</p>
+            <span class="prod-link">Detayları Gör →</span>
+          </div>
+        </div>
+        <div class="prod-card">
+          <div class="prod-img"><img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop" alt="İnce Zincir Kolye"></div>
+          <div class="prod-body">
+            <h4>İnce Zincir Kolye</h4>
+            <p>Günlük şıklık için tasarlanmış, minimal çizgili altın kolye.</p>
+            <span class="prod-link">Detayları Gör →</span>
+          </div>
+        </div>
+        <div class="prod-card">
+          <div class="prod-img"><img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=600&auto=format&fit=crop" alt="Damla Küpe"></div>
+          <div class="prod-body">
+            <h4>Damla Pırlanta Küpe</h4>
+            <p>Zarif damla formuyla özel davetler için tasarlanmış küpe.</p>
+            <span class="prod-link">Detayları Gör →</span>
+          </div>
+        </div>
+        <div class="prod-card">
+          <div class="prod-img"><img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=600&auto=format&fit=crop" alt="Premium Erkek Saat"></div>
+          <div class="prod-body">
+            <h4>Premium Erkek Saati</h4>
+            <p>İsviçre mekanizmalı, altın kaplama premium erkek saati.</p>
+            <span class="prod-link">Detayları Gör →</span>
+          </div>
+        </div>
+      </div>
+      <div class="slider-nav reveal">
+        <button id="prevProd" aria-label="Önceki">←</button>
+        <button id="nextProd" aria-label="Sonraki">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="surec" class="section-pad">
+    <div class="container">
+      <div class="reveal" style="max-width:640px;">
+        <span class="eyebrow">Üretim Süreci</span>
+        <h2 style="font-size:clamp(1.9rem,3.4vw,2.6rem); margin-top:16px;">Bir Parçanın Doğuşu</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="t-item">
+          <div class="t-dot">1</div>
+          <div class="t-content t-content-a reveal"><h4>Tasarım</h4><p>Tasarımcılarımız, en son trendleri klasik zarafetle harmanlayarak özgün eskizler oluşturur.</p></div>
+        </div>
+        <div class="t-item">
+          <div class="t-dot">2</div>
+          <div class="t-content t-content-a reveal"><h4>El İşçiliği</h4><p>Ustalarımız, seçilen değerli metal ve taşları saatler süren özenli bir emekle şekillendirir.</p></div>
+        </div>
+        <div class="t-item">
+          <div class="t-dot">3</div>
+          <div class="t-content t-content-a reveal"><h4>Kalite Kontrol</h4><p>Her parça, uzman ekibimiz tarafından ayrıntılı bir kalite denetiminden geçirilir.</p></div>
+        </div>
+        <div class="t-item">
+          <div class="t-dot">4</div>
+          <div class="t-content t-content-a reveal"><h4>Sertifikalandırma</h4><p>Değerli taşlarımız uluslararası laboratuvarlar tarafından sertifikalandırılır.</p></div>
+        </div>
+        <div class="t-item">
+          <div class="t-dot">5</div>
+          <div class="t-content t-content-a reveal"><h4>Teslimat</h4><p>Ürününüz özel ambalajıyla güvenli bir şekilde size veya mağazamıza ulaştırılır.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section-pad bg-panel">
+    <div class="container">
+      <div class="reveal" style="max-width:640px;">
+        <span class="eyebrow">Neden Biz?</span>
+        <h2 style="font-size:clamp(1.9rem,3.4vw,2.6rem); margin-top:16px;">Güvenin Adresi</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item reveal"><span class="why-num">01</span><div><h4>30+ Yıllık Deneyim</h4><p>Üç kuşaktır süregelen zanaat birikimi ve sektör tecrübesi.</p></div></div>
+        <div class="why-item reveal"><span class="why-num">02</span><div><h4>Orijinal Ürün Garantisi</h4><p>Sattığımız her ürün orijinallik garantisiyle teslim edilir.</p></div></div>
+        <div class="why-item reveal"><span class="why-num">03</span><div><h4>Sertifikalı Mücevher</h4><p>Pırlanta ve değerli taşlarımız uluslararası sertifikalıdır.</p></div></div>
+        <div class="why-item reveal"><span class="why-num">04</span><div><h4>Uzman Danışmanlık</h4><p>Doğru seçimi yapmanız için deneyimli ekibimiz yanınızda.</p></div></div>
+        <div class="why-item reveal"><span class="why-num">05</span><div><h4>Kaliteli İşçilik</h4><p>Her detay, titizlikle işlenmiş el işçiliğinin izlerini taşır.</p></div></div>
+        <div class="why-item reveal"><span class="why-num">06</span><div><h4>Güvenilir Hizmet</h4><p>Satış öncesi ve sonrası kesintisiz, şeffaf destek.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="yorumlar" class="section-pad">
+    <div class="container">
+      <div class="reveal" style="max-width:640px;">
+        <span class="eyebrow">Müşteri Yorumları</span>
+        <h2 style="font-size:clamp(1.9rem,3.4vw,2.6rem); margin-top:16px;">Bizi Onlardan Dinleyin</h2>
+      </div>
+      <div class="testi-track reveal" id="testiSlider">
+        <div class="testi-card"><div class="stars">★★★★★</div><p>"Yüzüğümüzü özel olarak tasarlattık, sonuç beklediğimizden çok daha güzeldi. Teşekkürler AURELİA."</p><div class="testi-person"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100&auto=format&fit=crop" alt=""><div><h5>Elif Y.</h5><span>İstanbul</span></div></div></div>
+        <div class="testi-card"><div class="stars">★★★★★</div><p>"Sertifikalı pırlanta almanın verdiği güven ve satış sonrası ilgi çok değerliydi."</p><div class="testi-person"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop" alt=""><div><h5>Mert K.</h5><span>Ankara</span></div></div></div>
+        <div class="testi-card"><div class="stars">★★★★★</div><p>"İşçilik kalitesi gerçekten üst düzey. Yıllardır bu kadar özenli bir mağaza görmemiştim."</p><div class="testi-person"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&auto=format&fit=crop" alt=""><div><h5>Selin A.</h5><span>İzmir</span></div></div></div>
+        <div class="testi-card"><div class="stars">★★★★★</div><p>"Danışmanlık süreci çok profesyoneldi, doğru ürünü bulmamıza yardımcı oldular."</p><div class="testi-person"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100&auto=format&fit=crop" alt=""><div><h5>Ahmet D.</h5><span>Bursa</span></div></div></div>
+        <div class="testi-card"><div class="stars">★★★★★</div><p>"Nişan yüzüğümüzü buradan aldık, hem tasarımı hem de sertifikası harikaydı."</p><div class="testi-person"><img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?q=80&w=100&auto=format&fit=crop" alt=""><div><h5>Zeynep T.</h5><span>Antalya</span></div></div></div>
+        <div class="testi-card"><div class="stars">★★★★★</div><p>"Yılların tecrübesi her detayda hissediliyor. Kesinlikle tavsiye ediyorum."</p><div class="testi-person"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=100&auto=format&fit=crop" alt=""><div><h5>Burak S.</h5><span>Kocaeli</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section-pad bg-panel">
+    <div class="container">
+      <div class="reveal" style="max-width:640px;">
+        <span class="eyebrow">Galeri</span>
+        <h2 style="font-size:clamp(1.9rem,3.4vw,2.6rem); margin-top:16px;">Detaylarda Saklı Zarafet</h2>
+      </div>
+      <div class="gallery-grid reveal" id="galleryGrid">
+        <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=500&auto=format&fit=crop" alt="Galeri görseli 1">
+        <img src="https://images.unsplash.com/photo-1600721391689-2564bb8055de?q=80&w=500&auto=format&fit=crop" alt="Galeri görseli 2">
+        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=500&auto=format&fit=crop" alt="Galeri görseli 3">
+        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=500&auto=format&fit=crop" alt="Galeri görseli 4">
+        <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=500&auto=format&fit=crop" alt="Galeri görseli 5">
+        <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=500&auto=format&fit=crop" alt="Galeri görseli 6">
+        <img src="https://images.unsplash.com/photo-1620656798579-1984d9e87df7?q=80&w=500&auto=format&fit=crop" alt="Galeri görseli 7">
+        <img src="https://images.unsplash.com/photo-1544376798-89aa6b82c6cc?q=80&w=500&auto=format&fit=crop" alt="Galeri görseli 8">
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="reveal" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px;">
+        <div>
+          <span class="eyebrow">Instagram</span>
+          <h2 style="font-size:clamp(1.9rem,3.4vw,2.6rem); margin-top:16px;">@aurelia.kuyumcu</h2>
+        </div>
+        <a href="#" class="btn btn-outline">Takip Et</a>
+      </div>
+      <div class="insta-grid reveal">
+        <div class="insta-item"><img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=300&auto=format&fit=crop" alt=""></div>
+        <div class="insta-item"><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=300&auto=format&fit=crop" alt=""></div>
+        <div class="insta-item"><img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=300&auto=format&fit=crop" alt=""></div>
+        <div class="insta-item"><img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=300&auto=format&fit=crop" alt=""></div>
+        <div class="insta-item"><img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=300&auto=format&fit=crop" alt=""></div>
+        <div class="insta-item"><img src="https://images.unsplash.com/photo-1620656798579-1984d9e87df7?q=80&w=300&auto=format&fit=crop" alt=""></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="sss" class="section-pad bg-panel">
+    <div class="container" style="max-width:900px;">
+      <div class="reveal">
+        <span class="eyebrow">Sık Sorulan Sorular</span>
+        <h2 style="font-size:clamp(1.9rem,3.4vw,2.6rem); margin-top:16px;">Merak Ettikleriniz</h2>
+      </div>
+      <div style="margin-top:44px;" class="reveal">
+        <div class="faq-item">
+          <div class="faq-q"><span>Ürünler sertifikalı mı?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>Evet, tüm pırlanta ve değerli taş içeren ürünlerimiz uluslararası kabul görmüş gemoloji laboratuvarları tarafından sertifikalandırılır ve sertifika ürünle birlikte teslim edilir.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>Sipariş süreci nasıl işliyor?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>İletişim formu, telefon veya mağazamız üzerinden talebinizi iletebilirsiniz. Uzman ekibimiz sizinle iletişime geçerek süreci baştan sona yönetir.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>Özel tasarım yapılabiliyor mu?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>Elbette. Tasarımcılarımızla birebir görüşerek hayalinizdeki parçayı eskizden üretime kadar birlikte şekillendirebilirsiniz.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>Garanti süresi nedir?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>Tüm ürünlerimiz işçilik ve malzeme kusurlarına karşı 2 yıl garanti kapsamındadır. Detaylar için müşteri hizmetlerimizle iletişime geçebilirsiniz.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>Ürünleri mağazadan görebilir miyim?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>Elbette, sizi mağazamızda ağırlamaktan memnuniyet duyarız. Randevu almak için iletişim formunu doldurabilirsiniz.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="iletisim" class="section-pad">
+    <div class="container">
+      <div class="reveal" style="max-width:640px; display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px;">
+        <div>
+          <span class="eyebrow">İletişim</span>
+          <h2 style="font-size:clamp(1.9rem,3.4vw,2.6rem); margin-top:16px;">Sizi Ağırlamaktan Mutluluk Duyarız</h2>
+        </div>
+        <button type="button" class="btn btn-gold" id="openBookingContact">Randevu Al</button>
+      </div>
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="info-row">
+            <svg class="info-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+            <div><h5>Telefon</h5><p>+90 212 000 00 00</p></div>
+          </div>
+          <div class="info-row">
+            <svg class="info-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M17 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/><path d="M12 18h.01"/></svg>
+            <div><h5>WhatsApp</h5><p>+90 532 000 00 00</p></div>
+          </div>
+          <div class="info-row">
+            <svg class="info-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <div><h5>E-posta</h5><p>info@aurelia.com.tr</p></div>
+          </div>
+          <div class="info-row">
+            <svg class="info-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><h5>Adres</h5><p>Nişantaşı, Teşvikiye Cad. No:12, Şişli / İstanbul</p></div>
+          </div>
+          <div class="info-row" style="border-bottom:none;">
+            <svg class="info-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <div><h5>Çalışma Saatleri</h5><p>Pzt–Cmt: 10:00–19:00 · Pazar: Kapalı</p></div>
+          </div>
+        </div>
+
+        <form class="reveal" id="contactForm" novalidate>
+          <div class="field" id="f-name">
+            <label for="name">Ad Soyad</label>
+            <input type="text" id="name" name="name" placeholder="Adınız ve soyadınız">
+            <div class="err-msg">Lütfen adınızı giriniz.</div>
+          </div>
+          <div class="field" id="f-phone">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone" placeholder="05XX XXX XX XX">
+            <div class="err-msg">Lütfen geçerli bir telefon numarası giriniz.</div>
+          </div>
+          <div class="field" id="f-email">
+            <label for="email">E-posta</label>
+            <input type="email" id="email" name="email" placeholder="ornek@eposta.com">
+            <div class="err-msg">Lütfen geçerli bir e-posta adresi giriniz.</div>
+          </div>
+          <div class="field" id="f-message">
+            <label for="message">Mesaj</label>
+            <textarea id="message" name="message" rows="4" placeholder="Size nasıl yardımcı olabiliriz?"></textarea>
+            <div class="err-msg">Lütfen mesajınızı giriniz.</div>
+          </div>
+          <button type="submit" class="btn btn-gold" style="border:none; width:100%; justify-content:center;">Gönder</button>
+        </form>
+      </div>
+
+      <div class="map-frame reveal">
+        <iframe src="https://www.google.com/maps?q=Ni%C5%9Fanta%C5%9F%C4%B1%2C%20%C4%B0stanbul&output=embed" width="100%" height="360" style="border:0; display:block;" loading="lazy" title="Mağaza Konumu"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo">AUR<span>E</span>LİA</a>
+        <p style="color:var(--stone); font-size:0.9rem; margin-top:18px; max-width:32ch; line-height:1.7;">1991'den bu yana el işçiliği ve güvenle şekillenen mücevher sanatı.</p>
+      </div>
+      <div>
+        <h5>Hızlı Menü</h5>
+        <ul>
+          <li><a href="#hakkimizda">Hakkımızda</a></li>
+          <li><a href="#surec">Üretim Süreci</a></li>
+          <li><a href="#sss">SSS</a></li>
+          <li><a href="#iletisim">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Koleksiyonlar</h5>
+        <ul>
+          <li><a href="#koleksiyonlar">Altın Takılar</a></li>
+          <li><a href="#koleksiyonlar">Pırlanta</a></li>
+          <li><a href="#koleksiyonlar">Yüzük</a></li>
+          <li><a href="#koleksiyonlar">Özel Tasarım</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Kurumsal</h5>
+        <ul>
+          <li><a href="gizlilik-politikasi.html">Gizlilik Politikası</a></li>
+          <li><a href="kvkk.html">KVKK</a></li>
+          <li><a href="kullanim-sartlari.html">Kullanım Şartları</a></li>
+          <li><a href="#" id="openCookieSettings">Çerez Ayarları</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 AURELİA Kuyumcu. Tüm hakları saklıdır.</span>
+      <div class="social-row">
+        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING -->
+<div class="float-wrap">
+  <div class="float-btn top-btn" id="topBtn" role="button" aria-label="Yukarı çık">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </div>
+  <a href="tel:+902120000000" class="float-btn call-btn" aria-label="Ara">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+  </a>
+  <a href="https://wa.me/905320000000" target="_blank" rel="noopener" class="float-btn whatsapp-btn" aria-label="WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.39a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.06c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.12.11-1.8-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.14-4.9-4.33-.14-.19-1.17-1.55-1.17-2.96s.73-2.1.99-2.39c.26-.28.57-.35.76-.35h.55c.18 0 .42-.07.65.5.24.58.81 2 .88 2.15.07.15.12.32.02.52-.1.19-.15.32-.3.49-.15.17-.32.38-.45.51-.15.15-.31.31-.13.61.18.31.79 1.31 1.7 2.12 1.17 1.04 2.15 1.37 2.46 1.52.31.15.49.13.67-.08.18-.2.77-.9.98-1.21.2-.31.41-.26.68-.15.28.1 1.77.84 2.08 1 .3.15.51.23.58.36.08.13.08.75-.16 1.43z"/></svg>
+  </a>
+</div>
+
+<!-- BOOKING MODAL -->
+<div class="booking-overlay" id="bookingOverlay">
+  <div class="booking-modal">
+    <div class="booking-head">
+      <div>
+        <h3>Randevu Al</h3>
+        <span>Tarih ve saat seçerek mağazamızdan randevu talep edin</span>
+      </div>
+      <div class="booking-close" id="bookingClose" role="button" aria-label="Kapat">&times;</div>
+    </div>
+    <div class="booking-body" id="bookingBody">
+
+      <div>
+        <div class="cal-nav">
+          <h4 id="calMonthLabel"></h4>
+          <div class="cal-nav-btns">
+            <button type="button" id="calPrev" aria-label="Önceki ay">←</button>
+            <button type="button" id="calNext" aria-label="Sonraki ay">→</button>
+          </div>
+        </div>
+        <div class="cal-weekdays">
+          <span>Pzt</span><span>Sal</span><span>Çar</span><span>Per</span><span>Cum</span><span>Cmt</span><span>Paz</span>
+        </div>
+        <div class="cal-grid" id="calGrid"></div>
+        <div class="cal-legend">
+          <span><span class="cal-legend-dot" style="background:var(--gold);"></span>Seçili</span>
+          <span><span class="cal-legend-dot" style="background:rgba(255,255,255,0.15);"></span>Pazar / Kapalı</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="booking-summary" id="bookingSummary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--gold); flex-shrink:0;"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span>Seçilen: <strong id="summaryText">—</strong></span>
+        </div>
+
+        <div class="slot-label">Uygun Saatler</div>
+        <div class="slot-grid" id="slotGrid">
+          <div class="slot-empty">Lütfen önce bir tarih seçin.</div>
+        </div>
+
+        <div class="booking-form-title">İletişim Bilgileriniz</div>
+        <form id="bookingForm" novalidate>
+          <div class="field" id="bf-name">
+            <label for="b-name">Ad Soyad</label>
+            <input type="text" id="b-name" name="name" placeholder="Adınız ve soyadınız">
+            <div class="err-msg">Lütfen adınızı giriniz.</div>
+          </div>
+          <div class="field" id="bf-phone">
+            <label for="b-phone">Telefon</label>
+            <input type="tel" id="b-phone" name="phone" placeholder="05XX XXX XX XX">
+            <div class="err-msg">Lütfen geçerli bir telefon numarası giriniz.</div>
+          </div>
+          <div class="field" id="bf-service">
+            <label for="b-service">Hizmet Türü</label>
+            <select id="b-service" name="service" style="width:100%; background:var(--panel); border:none; border-bottom:1px solid rgba(255,255,255,0.25); padding:10px 2px; color:var(--white); font-family:'Jost',sans-serif; font-size:1rem;">
+              <option value="Genel Danışmanlık">Genel Danışmanlık</option>
+              <option value="Özel Tasarım">Özel Tasarım</option>
+              <option value="Ürün İnceleme">Ürün İnceleme</option>
+              <option value="Onarım / Bakım">Onarım / Bakım</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-gold" style="border:none; width:100%; justify-content:center; margin-top:6px;">Randevu Talebini Gönder</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" id="lightboxClose">&times;</span>
+  <img src="" alt="" id="lightboxImg">
+</div>
+
+<!-- COOKIE -->
+<div class="cookie" id="cookieBar">
+  <p>Web sitemizde deneyiminizi geliştirmek için çerezler kullanıyoruz. Detaylar için <a href="gizlilik-politikasi.html" style="color:var(--gold);">Gizlilik Politikası</a> sayfamızı inceleyebilirsiniz.</p>
+  <div class="cookie-actions">
+    <button class="accept" id="acceptCookie">Kabul Et</button>
+    <button id="declineCookie">Reddet</button>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  // loader
+  window.addEventListener('load', () => {
+    setTimeout(()=> document.getElementById('loader').classList.add('hide'), 500);
+  });
+  setTimeout(()=> document.getElementById('loader').classList.add('hide'), 2200);
+
+  // header on scroll + scroll progress + thread + back to top
+  const header = document.getElementById('siteHeader');
+  const scrollBar = document.getElementById('scrollBar');
+  const threadPath = document.getElementById('threadPath');
+  const topBtn = document.getElementById('topBtn');
+  const len = threadPath.getTotalLength ? threadPath.getTotalLength() : 100;
+  threadPath.style.strokeDasharray = len;
+  threadPath.style.strokeDashoffset = len;
+
+  function onScroll(){
+    const y = window.scrollY;
+    header.classList.toggle('scrolled', y > 60);
+    topBtn.classList.toggle('show', y > 700);
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docH > 0 ? y / docH : 0;
+    scrollBar.style.width = (pct*100) + '%';
+    threadPath.style.strokeDashoffset = len - (len * pct);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  topBtn.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+  // internal anchor links: scroll manually instead of letting the browser
+  // navigate to "#id" (which in some embedded preview frames shows the full
+  // sandbox URL with the hash appended in the address bar)
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    const targetId = link.getAttribute('href').slice(1);
+    if(!targetId) return;
+    link.addEventListener('click', (e)=>{
+      const target = document.getElementById(targetId);
+      if(target){
+        e.preventDefault();
+        const headerOffset = 90;
+        const y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+        window.scrollTo({top:y, behavior:'smooth'});
+      }
+    });
+  });
+
+  // mobile menu
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  function toggleMenu(){
+    mobileMenu.classList.toggle('open');
+    burger.classList.toggle('active');
+  }
+  burger.addEventListener('click', toggleMenu);
+  burger.addEventListener('keypress', e => { if(e.key==='Enter') toggleMenu(); });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', toggleMenu));
+
+  // reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.15});
+  revealEls.forEach(el => io.observe(el));
+
+  // product slider
+  const prodSlider = document.getElementById('prodSlider');
+  document.getElementById('nextProd').addEventListener('click', ()=> prodSlider.scrollBy({left:308, behavior:'smooth'}));
+  document.getElementById('prevProd').addEventListener('click', ()=> prodSlider.scrollBy({left:-308, behavior:'smooth'}));
+
+  // faq accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-a').style.maxHeight = null; });
+      if(!isOpen){ item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
+    });
+  });
+
+  // gallery lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  document.querySelectorAll('#galleryGrid img').forEach(img => {
+    img.addEventListener('click', ()=>{
+      lightboxImg.src = img.src.replace('w=500','w=1400');
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('open');
+    });
+  });
+  document.getElementById('lightboxClose').addEventListener('click', ()=> lightbox.classList.remove('open'));
+  lightbox.addEventListener('click', (e)=> { if(e.target === lightbox) lightbox.classList.remove('open'); });
+
+  // contact form validation
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    let valid = true;
+    const name = document.getElementById('name');
+    const phone = document.getElementById('phone');
+    const email = document.getElementById('email');
+    const message = document.getElementById('message');
+
+    function setErr(fieldId, cond){
+      const el = document.getElementById(fieldId);
+      el.classList.toggle('error', cond);
+      if(cond) valid = false;
+    }
+    setErr('f-name', name.value.trim().length < 2);
+    setErr('f-phone', !/^[0-9\s()+-]{10,}$/.test(phone.value.trim()));
+    setErr('f-email', !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim()));
+    setErr('f-message', message.value.trim().length < 5);
+
+    if(valid){
+      form.innerHTML = '<div style="padding:50px 0; text-align:center;"><h3 style="font-size:1.8rem;">Teşekkürler, ' + name.value.split(" ")[0] + '!</h3><p style="color:var(--stone); margin-top:14px;">Mesajınız bize ulaştı. Ekibimiz en kısa sürede sizinle iletişime geçecek.</p></div>';
+    }
+  });
+
+  // cookie bar
+  const cookieBar = document.getElementById('cookieBar');
+  if(!localStorageSafeGet('aurelia_cookie_consent')){
+    setTimeout(()=> cookieBar.classList.add('show'), 1500);
+  }
+  document.getElementById('acceptCookie').addEventListener('click', ()=>{ cookieBar.classList.remove('show'); localStorageSafeSet('aurelia_cookie_consent','accepted'); });
+  document.getElementById('declineCookie').addEventListener('click', ()=>{ cookieBar.classList.remove('show'); localStorageSafeSet('aurelia_cookie_consent','declined'); });
+  document.getElementById('openCookieSettings').addEventListener('click', (e)=>{ e.preventDefault(); cookieBar.classList.add('show'); });
+
+  // safe localStorage wrapper (falls back to memory if unavailable)
+  let memoryStore = {};
+  function localStorageSafeGet(k){ try{ return localStorage.getItem(k); }catch(e){ return memoryStore[k]; } }
+  function localStorageSafeSet(k,v){ try{ localStorage.setItem(k,v); }catch(e){ memoryStore[k]=v; } }
+
+  /* ---------------- BOOKING SYSTEM ---------------- */
+  // Backend'inizi Render/Railway'e deploy ettikten sonra aldığınız adresi
+  // buraya yazın (README.md dosyasındaki adımları izleyin).
+  const API_BASE_URL = 'https://SIZIN-BACKEND-ADRESINIZ.onrender.com';
+
+  const bookingOverlay = document.getElementById('bookingOverlay');
+  const bookingBody = document.getElementById('bookingBody');
+  const calGrid = document.getElementById('calGrid');
+  const calMonthLabel = document.getElementById('calMonthLabel');
+  const calPrev = document.getElementById('calPrev');
+  const calNext = document.getElementById('calNext');
+  const slotGrid = document.getElementById('slotGrid');
+  const bookingSummary = document.getElementById('bookingSummary');
+  const summaryText = document.getElementById('summaryText');
+  const bookingForm = document.getElementById('bookingForm');
+
+  const monthNames = ['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+  const today = new Date(); today.setHours(0,0,0,0);
+  let viewYear = today.getFullYear();
+  let viewMonth = today.getMonth();
+  let selectedDate = null; // Date object
+  let selectedTime = null; // "10:00"
+
+  function openBooking(){
+    bookingOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    renderCalendar();
+  }
+  function closeBooking(){
+    bookingOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  ['openBookingNav','openBookingMobile','openBookingHero','openBookingContact'].forEach(id=>{
+    const btn = document.getElementById(id);
+    if(btn) btn.addEventListener('click', ()=>{
+      if(id === 'openBookingMobile'){ mobileMenu.classList.remove('open'); }
+      openBooking();
+    });
+  });
+  document.getElementById('bookingClose').addEventListener('click', closeBooking);
+  bookingOverlay.addEventListener('click', (e)=>{ if(e.target === bookingOverlay) closeBooking(); });
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape' && bookingOverlay.classList.contains('open')) closeBooking(); });
+
+  function renderCalendar(){
+    calMonthLabel.textContent = monthNames[viewMonth] + ' ' + viewYear;
+    calGrid.innerHTML = '';
+
+    const firstOfMonth = new Date(viewYear, viewMonth, 1);
+    // Monday-first index: JS getDay() 0=Sun..6=Sat -> convert to 0=Mon..6=Sun
+    let startIdx = (firstOfMonth.getDay() + 6) % 7;
+    const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+
+    for(let i=0; i<startIdx; i++){
+      const empty = document.createElement('div');
+      empty.className = 'cal-day empty';
+      calGrid.appendChild(empty);
+    }
+
+    for(let d=1; d<=daysInMonth; d++){
+      const dateObj = new Date(viewYear, viewMonth, d);
+      const cell = document.createElement('div');
+      cell.className = 'cal-day';
+      cell.textContent = d;
+
+      const isPast = dateObj < today;
+      const isSunday = dateObj.getDay() === 0;
+      const isToday = dateObj.getTime() === today.getTime();
+
+      if(isToday) cell.classList.add('today');
+
+      if(isPast || isSunday){
+        cell.classList.add('disabled');
+      } else {
+        cell.addEventListener('click', ()=> selectDate(dateObj, cell));
+      }
+
+      if(selectedDate && dateObj.getTime() === selectedDate.getTime()){
+        cell.classList.add('selected');
+      }
+
+      calGrid.appendChild(cell);
+    }
+
+    // limit navigating before current month
+    calPrev.disabled = (viewYear === today.getFullYear() && viewMonth === today.getMonth());
+  }
+
+  calPrev.addEventListener('click', ()=>{
+    viewMonth--; if(viewMonth < 0){ viewMonth = 11; viewYear--; }
+    renderCalendar();
+  });
+  calNext.addEventListener('click', ()=>{
+    viewMonth++; if(viewMonth > 11){ viewMonth = 0; viewYear++; }
+    renderCalendar();
+  });
+
+  const weekdayNamesLong = ['Pazar','Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi'];
+
+  function toISODate(dateObj){
+    const y = dateObj.getFullYear();
+    const m = String(dateObj.getMonth()+1).padStart(2,'0');
+    const d = String(dateObj.getDate()).padStart(2,'0');
+    return `${y}-${m}-${d}`;
+  }
+
+  function selectDate(dateObj, cell){
+    selectedDate = dateObj;
+    selectedTime = null;
+    document.querySelectorAll('.cal-day.selected').forEach(c => c.classList.remove('selected'));
+    cell.classList.add('selected');
+    renderSlots(dateObj);
+    updateSummary();
+  }
+
+  // Gerçek uygunluk durumunu backend'den çeker (aynı saate ikinci kişi
+  // randevu alamaz, çünkü bu bilgi veritabanından geliyor).
+  async function renderSlots(dateObj){
+    slotGrid.innerHTML = '<div class="slot-empty">Uygun saatler yükleniyor...</div>';
+    const dateStr = toISODate(dateObj);
+
+    let data;
+    try{
+      const res = await fetch(`${API_BASE_URL}/api/availability?date=${dateStr}`);
+      if(!res.ok){
+        const err = await res.json().catch(()=>({}));
+        slotGrid.innerHTML = `<div class="slot-empty">${err.error || 'Uygunluk bilgisi alınamadı.'}</div>`;
+        return;
+      }
+      data = await res.json();
+    }catch(err){
+      slotGrid.innerHTML = '<div class="slot-empty">Sunucuya bağlanılamadı. Lütfen internet bağlantınızı kontrol edip tekrar deneyin.</div>';
+      return;
+    }
+
+    slotGrid.innerHTML = '';
+    const slots = data.slots || [];
+
+    if(!slots.length){
+      slotGrid.innerHTML = '<div class="slot-empty">Bu gün kapalıyız, lütfen başka bir tarih seçin.</div>';
+      return;
+    }
+
+    let anyAvailable = false;
+    slots.forEach(slot=>{
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'slot-btn';
+      btn.textContent = slot.time;
+
+      if(!slot.available){
+        btn.disabled = true;
+      } else {
+        anyAvailable = true;
+        btn.addEventListener('click', ()=>{
+          document.querySelectorAll('.slot-btn.selected').forEach(b=>b.classList.remove('selected'));
+          btn.classList.add('selected');
+          selectedTime = slot.time;
+          updateSummary();
+        });
+      }
+      slotGrid.appendChild(btn);
+    });
+
+    if(!anyAvailable){
+      slotGrid.innerHTML = '<div class="slot-empty">Bu tarihte uygun saat kalmadı, lütfen başka bir gün seçin.</div>';
+    }
+  }
+
+  function updateSummary(){
+    if(selectedDate){
+      const dayName = weekdayNamesLong[selectedDate.getDay()];
+      const dStr = selectedDate.getDate() + ' ' + monthNames[selectedDate.getMonth()] + ' ' + selectedDate.getFullYear() + ', ' + dayName;
+      summaryText.textContent = dStr + (selectedTime ? ' — ' + selectedTime : '');
+      bookingSummary.classList.add('show');
+    } else {
+      bookingSummary.classList.remove('show');
+    }
+  }
+
+  bookingForm.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    let valid = true;
+    const name = document.getElementById('b-name');
+    const phone = document.getElementById('b-phone');
+    const service = document.getElementById('b-service');
+    const submitBtn = bookingForm.querySelector('button[type="submit"]');
+
+    function setErr(fieldId, cond){
+      const el = document.getElementById(fieldId);
+      el.classList.toggle('error', cond);
+      if(cond) valid = false;
+    }
+    setErr('bf-name', name.value.trim().length < 2);
+    setErr('bf-phone', !/^[0-9\s()+-]{10,}$/.test(phone.value.trim()));
+
+    if(!selectedDate || !selectedTime){
+      valid = false;
+      bookingSummary.classList.add('show');
+      summaryText.textContent = 'Lütfen tarih ve saat seçin';
+    }
+
+    if(!valid) return;
+
+    const originalLabel = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Gönderiliyor...';
+
+    try{
+      const res = await fetch(`${API_BASE_URL}/api/bookings`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: name.value.trim(),
+          phone: phone.value.trim(),
+          service: service.value,
+          date: toISODate(selectedDate),
+          time: selectedTime
+        })
+      });
+
+      const data = await res.json().catch(()=>({}));
+
+      if(res.status === 409){
+        // Bu saat tam gönderim anında başka biri tarafından alınmış —
+        // saat listesini tazeleyip kullanıcıyı bilgilendir.
+        renderSlots(selectedDate);
+        selectedTime = null;
+        updateSummary();
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+        alert(data.error || 'Bu saat az önce doldu, lütfen başka bir saat seçin.');
+        return;
+      }
+
+      if(!res.ok){
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+        alert(data.error || 'Randevu oluşturulamadı, lütfen tekrar deneyin.');
+        return;
+      }
+
+      const dayName = weekdayNamesLong[selectedDate.getDay()];
+      const dStr = selectedDate.getDate() + ' ' + monthNames[selectedDate.getMonth()] + ' ' + selectedDate.getFullYear();
+
+      bookingBody.innerHTML = `
+        <div class="booking-success" style="grid-column:1/-1;">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
+          <h3>Randevunuz Alındı, ${name.value.split(' ')[0]}!</h3>
+          <p>Talebiniz bize ulaştı. Ekibimiz onay için kısa süre içinde sizi arayacak.</p>
+          <div class="summary-box">
+            <div><span>Tarih</span><b>${dStr}, ${dayName}</b></div>
+            <div><span>Saat</span><b>${selectedTime}</b></div>
+            <div><span>Hizmet</span><b>${service.value}</b></div>
+            <div><span>Telefon</span><b>${phone.value}</b></div>
+          </div>
+        </div>
+      `;
+    }catch(err){
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
+      alert('Sunucuya bağlanılamadı. Lütfen internet bağlantınızı kontrol edip tekrar deneyin.');
+    }
+  });
+
+});
+</script>
+</body>
+</html>
